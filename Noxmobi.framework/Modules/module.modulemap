@@ -1,0 +1,6 @@
+framework module Noxmobi {
+  umbrella header "Noxmobi.h"
+
+  export *
+  module * { export * }
+}
