@@ -37,6 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)useDebugLog:(BOOL)enable;
 
+/**
+ 展示一个检测页面，用来检测三方SDK的接入情况
+ */
++ (void)showDebugView;
+
 @end
 
 NS_ASSUME_NONNULL_END
