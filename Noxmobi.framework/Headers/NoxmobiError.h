@@ -68,7 +68,12 @@ typedef enum : NSUInteger {
     /*
      Server端配置的AppLovinSdkKey 与 info.plist 中的不一致
      */
-    NoxmobiErrorAppLovinSdkKeyError = 110
+    NoxmobiErrorAppLovinSdkKeyError = 110,
+    
+    /*
+     单日点击次数超限
+     */
+    NoxmobiErrorClickLimitError = 111
     
 } NoxmobiError;
 
