@@ -6,7 +6,7 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version string for Noxmobi. v1.4.5-02
+//! Project version string for Noxmobi.
 FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 
 // In this header, you should import all the public headers of your framework using statements like #import <Noxmobi/PublicHeader.h>
@@ -20,5 +20,4 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 #import <Noxmobi/NoxBannerViewDelegate.h>
 #import <Noxmobi/NoxAdSize.h>
 #import <Noxmobi/NoxmobiDefines.h>
-#import <Noxmobi/UIViewController+CheckVisible.h>
 #import <Noxmobi/NoxmobiError.h>
