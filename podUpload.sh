@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 # ===============修改podspec的版本号===========================
 
@@ -6,21 +6,32 @@ PodName="NoxmobiSDK"
 
 echo "\n🔥当前版本号："
 # 打印一下当前情况
-sed -n '/Mark/ p' $PodName.podspec
+#sed -n '/Mark/ p' $PodName.podspec
+currentLine=`cat $PodName.podspec | grep "Mark"`
+srcVer=${currentLine#*\"}
+srcVer=${srcVer%%\"*}
+echo "$srcVer"
 
 # 提示输入版本号
 echo "\n🔥请输入即将发布的版本号："
 
 # 接收终端输入的参数
-read verNum
+read inputVer
 
 # 打印参数
-echo "\n🔥输入的是：$verNum"
+if [[ "$inputVer" == "" ]]
+then
+    inputVer="$srcVer"
+    echo "使用: $srcVer"
+else
+    echo "\n🔥输入的是：$inputVer"
+fi
+
 
 # 使用sed进行替换 把1-5行的 数字.数字.数字 替换为1.4.3。保存到临时文件。
-#sed "1,5 s/[0-9].[0-9].[0-9]/$verNum/" ShellTest.podspec > Temp.podspec
+#sed "1,5 s/[0-9].[0-9].[0-9]/$inputVer/" ShellTest.podspec > Temp.podspec
 # 可以不指定行号 而是去匹配标记行，在行尾的注释中做标记
-sed "/Mark/ s/[0-9].[0-9].[0-9]/$verNum/" $PodName.podspec > Temp.podspec
+sed "/Mark/ s/[0-9].[0-9].[0-9]/$inputVer/" $PodName.podspec > Temp.podspec
 
 # 删除源文件
 rm $PodName.podspec
