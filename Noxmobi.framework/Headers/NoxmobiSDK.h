@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *appKey;
 @property (nonatomic, assign, readonly) BOOL isTestMode;
 @property (nonatomic, assign, readonly) BOOL debugLogEnable;
+@property (nonatomic, assign, readonly) BOOL muteStart;
 
 /**
  获取单例
@@ -41,6 +42,11 @@ NS_ASSUME_NONNULL_BEGIN
  展示一个检测页面，用来检测三方SDK的接入情况
  */
 + (void)showDebugView;
+
+/**
+ 是否静音开启广告，默认为YES，即静音开启广告 
+ */
+- (void)muteStart:(BOOL)mute;
 
 @end
 
