@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)showDebugView;
 
 /**
- 是否静音开启广告，默认为YES，即静音开启广告 
+ 是否静音开启广告，默认为NO不静音开启广告 
  */
 - (void)muteStart:(BOOL)mute;
 
