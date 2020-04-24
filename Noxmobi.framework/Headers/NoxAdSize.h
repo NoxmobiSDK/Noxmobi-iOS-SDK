@@ -39,13 +39,6 @@ extern NoxAdSize const kNoxAdSize320x100;
 extern NoxAdSize const kNoxAdSize300x250;
 
 /**
- * 仅支持Native，不考虑Banner
- */
-extern NoxAdFrame const kNoxAdFrameOnlyNative;
-
-
-
-/**
  * 通过CGSize获得自定广告尺寸
  */
 NOX_EXTERN NoxAdSize NoxAdSizeFromCGSize(CGSize size);

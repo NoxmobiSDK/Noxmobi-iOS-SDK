@@ -53,7 +53,7 @@ typedef enum : NSUInteger {
     /*
      无可用广告
      */
-    NoxmobiErrorAdIsUnavailableNow = 107, //
+    NoxmobiErrorAdIsUnavailableNow = 107,
     
     /*
      广告位不存在！请查看您提供的PlacementID是否正确。

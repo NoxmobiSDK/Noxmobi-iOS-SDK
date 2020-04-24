@@ -18,24 +18,21 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 初始化支持Banner&Native混排的单例对象
 
-@param placementID 广告位id
-
 @discussion 程序生命周期内只需要初始化一次即可，请勿多次调用
-
-adFrame举例：
-NoxAdFrame adFrame = NoxMakeAdFrame(12, 34, kNoxAdSize320x100);
-相当于banner的位置及尺寸：x = 12, y = 34, width = 320, height = 100
 */
-+ (void)initWithAdFrame:(NoxAdFrame)adFrame
-            placementID:(NSString *)placementID
-              superView:(UIView *)superView
++ (void)initWithPlacementID:(NSString *)placementID
      rootViewController:(UIViewController *)rootViewController
           templateStyle:(NoxTemplateStyle)templateStyle;
 
 /**
- 当+[NoxBannerView initWithAdFrame:placementID:rootViewController:templateStyle:]方法的入参templateStyle==NoxTemplateStyleNone时，
- 与本方法完全一致
- */
+初始化Banner单例对象
+
+@discussion 程序生命周期内只需要初始化一次即可，请勿多次调用
+
+adFrame举例：
+    NoxAdFrame adFrame = NoxMakeAdFrame(12, 34, kNoxAdSize320x100);
+    相当于banner的位置及尺寸：x = 12, y = 34, width = 320, height = 100
+*/
 + (void)initWithAdFrame:(NoxAdFrame)adFrame
             placementID:(NSString *)placementID
      rootViewController:(UIViewController *)rootViewController;
@@ -44,14 +41,6 @@ NoxAdFrame adFrame = NoxMakeAdFrame(12, 34, kNoxAdSize320x100);
  设置事件代理
  */
 + (void)setAdDelegate:(id<NoxBannerViewDelegate>)delegate forPlacementID:(NSString *)placementID;
-
-/**
- 展示一个 Banner & Native 混排的广告
- 
- 如果在init系列方法中传入过用于展示Banner广告的父视图SuperView，
- 则应使用本方法展示Banner
- */
-+ (void)showBanner:(NSString *)placementID;
 
 /**
  展示一个Banner广告
@@ -67,7 +56,7 @@ NoxAdFrame adFrame = NoxMakeAdFrame(12, 34, kNoxAdSize320x100);
  4.superView的bounds.size不可过小
  5.superView必须能够正常展示，不可传入未在可见视图层级中的view
  */
-+ (void)showOnSupperView:(UIView *)superView forPlacementID:(NSString *)placementID;
++ (void)showOnSuperView:(UIView *)superView forPlacementID:(NSString *)placementID;
 
 /**
  Banner广告是否可展示
