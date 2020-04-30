@@ -2,8 +2,8 @@
 //  NoxTemplateStyle.h
 //  Noxmobi
 //
-//  Created by nox_chong on 2020/3/11.
-//  Copyright © 2020 Chong_Nox. All rights reserved.
+//  Created by Chong on 2020/3/11.
+//  Copyright © 2020 Chong. All rights reserved.
 //
 
 #ifndef NoxTemplateStyle_h

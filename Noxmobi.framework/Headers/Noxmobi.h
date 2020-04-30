@@ -1,8 +1,8 @@
 //
 //  Noxmobi.h
 //
-//  Created by nox_chong on 2019/1/12.
-//  Copyright © 2019年 Chong_Nox. All rights reserved.
+//  Created by Chong on 2019/1/12.
+//  Copyright © 2019年 Chong. All rights reserved.
 
 #import <UIKit/UIKit.h>
 

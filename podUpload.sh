@@ -87,9 +87,15 @@ then
         pod setup
         echo "\n🔥开始删除原索引\n"
         rm ~/Library/Caches/CocoaPods/search_index.json
-        echo "\n🔥开始search\n\n"
-        searchRes=`pod search $PodName`
-        echo "$searchRes"
+        echo "\n🔥开始第一次search\n\n"
+        searchRes1=`pod search $PodName`
+        echo "$searchRes1"
+        echo "\n🔥开始pod repo update\n\n"
+        repoUpdateRes=`pod repo update`
+        echo "$repoUpdateRes"
+        echo "\n🔥开始第二次search\n\n"
+        searchRes2=`pod search $PodName`
+        echo "$searchRes2"
     fi
 
 else
