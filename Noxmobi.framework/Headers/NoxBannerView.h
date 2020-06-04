@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 初始化支持Banner&Native混排的单例对象
 
-@discussion 程序生命周期内只需要初始化一次即可，请勿多次调用
+@discussion rootViewController在广告展示前若被销毁，请重新调用此方法传入可用的rootViewController
 */
 + (void)initWithPlacementID:(NSString *)placementID
      rootViewController:(UIViewController *)rootViewController
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 初始化Banner单例对象
 
-@discussion 程序生命周期内只需要初始化一次即可，请勿多次调用
+@discussion rootViewController在广告展示前若被销毁，请重新调用此方法传入可用的rootViewController
 
 adFrame举例：
     NoxAdFrame adFrame = NoxMakeAdFrame(12, 34, kNoxAdSize320x100);

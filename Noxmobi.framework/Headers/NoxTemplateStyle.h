@@ -13,7 +13,7 @@
  原生广告的模板样式
  */
 typedef enum : NSUInteger {
-    NoxTemplateStyleNone,       // 无模板样式
+    NoxTemplateStyleNone,       // Banner；如非必要，勿选此项
     NoxTemplateStyleFillView    // 充满视图
 } NoxTemplateStyle;
 

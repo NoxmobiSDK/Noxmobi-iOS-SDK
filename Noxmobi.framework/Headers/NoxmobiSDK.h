@@ -6,7 +6,7 @@
 //  Copyright © 2019年 Chong. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -47,6 +47,19 @@ NS_ASSUME_NONNULL_BEGIN
  是否静音开启广告，默认为NO不静音开启广告 
  */
 - (void)muteStart:(BOOL)mute;
+
+
+#pragma mark - Remote Config API
+/**
+ 初始化Remote Config
+ 
+ 注意：此方法必须在初始化Firebase之后再调用，否则无效
+ 
+ @param plistName 设置RC默认配置所需的plist文件名
+ @param minimumInterval 设置RC获取配置的最小间隔，-1 代表不设置；单位：秒(s)
+ */
+- (void)initializeRCWithDefaultsPlistFile:(nullable NSString *)plistName minimumFetchInterval:(NSTimeInterval)minimumInterval;
+
 
 @end
 
