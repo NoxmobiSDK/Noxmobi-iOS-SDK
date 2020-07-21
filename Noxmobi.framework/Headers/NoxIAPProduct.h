@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *productCurrencyCode;
 @property (nonatomic, copy) NSString *productPrice;
 @property (nonatomic, copy) NSString *productID;
-@property (nonatomic, copy) NSString *transactionID;
 @property (nonatomic, strong) SKProduct *sourceProduct;
 
 @end
