@@ -27,14 +27,25 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithConnector:(id<NoxConnectorProtocol>)connector;
 
 /// 获取一个横幅广告
-- (id __nullable)getBannerWithSize:(NoxAdSize)adSize;
-/// Adapter持有一个插屏广告
-- (void)getInterstitial;
-/// Adapter持有一个激励视频广告
-- (void)getRewardVideo;
+- (id __nullable)loadBannerWithSize:(NoxAdSize)adSize;
 
-/// 展示一个广告
-- (void)showAd:(UIViewController *)rootViewController;
+/// Adapter加载一个插屏广告
+- (void)loadInterstitial;
+
+/// Adapter加载一个激励广告
+- (void)loadRewardVideo;
+
+/// 展示一个插屏广告
+- (void)showInterstitialAd:(UIViewController *)rootViewController;
+
+/// 展示一个激励广告
+- (void)showRewardAd:(UIViewController *)rootViewController;
+
+/// 插屏广告是否可用
+- (BOOL)isInterstitialAvailable;
+
+/// 激励广告是否可用
+- (BOOL)isRewardAvailable;
 
 @end
 

@@ -23,7 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否开启沙盒测试环境；默认为NO
 - (void)sandboxEnvEnable:(BOOL)enable;
 
-
 /// 请求商品列表
 - (void)requestProducts:(NSArray *)productIDs;
 /// 发起购买
