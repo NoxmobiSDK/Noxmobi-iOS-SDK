@@ -12,38 +12,7 @@ srcVer=${currentLine#*\"}
 srcVer=${srcVer%%\"*}
 echo "$srcVer"
 
-# 提示输入版本号
-echo "\n🔥请输入即将发布的版本号："
-
-# 接收终端输入的参数
-read inputVer
-
-# 打印参数
-if [[ "$inputVer" == "" ]]
-then
-    inputVer="$srcVer"
-    echo "使用: $srcVer"
-else
-    echo "\n🔥输入的是：$inputVer"
-fi
-
-
-# 使用sed进行替换 把1-5行的 数字.数字.数字 替换为1.4.3。保存到临时文件。
-#sed "1,5 s/[0-9].[0-9].[0-9]/$inputVer/" ShellTest.podspec > Temp.podspec
-# 可以不指定行号 而是去匹配标记行，在行尾的注释中做标记
-sed "/Mark/ s/[0-9].[0-9].[0-9]/$inputVer/" $PodName.podspec > Temp.podspec
-
-# 删除源文件
-rm $PodName.podspec
-
-# 修改临时文件名为源文件名
-mv Temp.podspec $PodName.podspec
-
-echo "\n🔥修改完毕"
-sed -n '/Mark/ p' $PodName.podspec
-
 # ===============验证语法============================
-
 # 语法检查的原命令
 srcCommand="pod spec lint $PodName.podspec"
 # push的原命令

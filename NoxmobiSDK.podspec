@@ -17,5 +17,6 @@ Pod::Spec.new do |spec|
   spec.frameworks = "Foundation", "UIKit", "AdSupport" #依赖多个系统framework
   # spec.libraries = 'iconv', 'xml2' # 设置依赖多个系统的library
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  spec.dependency "AFNetworking", "~> 4.0.1"
+  spec.dependency 'AFNetworking', '~> 4.0.1'
+  # spec.dependency "AppLovinMediationAmazonAdapter", "3.1.0.0.0"
 end
