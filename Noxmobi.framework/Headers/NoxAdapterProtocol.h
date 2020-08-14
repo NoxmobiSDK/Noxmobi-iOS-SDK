@@ -47,6 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 激励广告是否可用
 - (BOOL)isRewardAvailable;
 
+/// 针对于MoPub这种必须在SDK初始化之后才能
+@property (nonatomic, strong) id bannerAd;
+
 @end
 
 NS_ASSUME_NONNULL_END
