@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取单例
 + (instancetype)shared;
+
 /// 是否开启沙盒测试环境；默认为NO
 - (void)sandboxEnvEnable:(BOOL)enable;
 /// 设置共享秘钥（可以是'主共享秘钥'，也可以是'App专用共享密钥'）
