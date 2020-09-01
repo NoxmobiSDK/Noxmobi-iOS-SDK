@@ -40,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)noxAdDidClose:(id<NoxAdapterProtocol>)adapter;
 - (void)noxAdDidRewarded:(id<NoxAdapterProtocol>)adapter;
 - (void)noxAdDidStartPlaying:(id<NoxAdapterProtocol>)adapter;
+- (void)noxNaitveAdDidLoad:(id)nativeAd adapter:(id<NoxAdapterProtocol>)adapter;
 
 @end
 
