@@ -8,7 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NoxIAPConst.h"
+#import <Noxmobi/NoxIAPConst.h>
 
 @class NoxIAPProduct;
 

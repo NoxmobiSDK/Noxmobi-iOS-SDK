@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NoxBannerViewDelegate.h"
-#import "NoxAdSize.h"
-#import "NoxTemplateStyle.h"
+#import <Noxmobi/NoxBannerViewDelegate.h>
+#import <Noxmobi/NoxAdSize.h>
+#import <Noxmobi/NoxTemplateStyle.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

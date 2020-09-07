@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NoxRewardVideoDelegate.h"
+#import <Noxmobi/NoxRewardVideoDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

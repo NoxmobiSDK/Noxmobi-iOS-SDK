@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *appKey;
 @property (nonatomic, assign, readonly) BOOL isTestMode;
 @property (nonatomic, assign, readonly) BOOL debugLogEnable;
-@property (nonatomic, assign, readonly) BOOL muteStart;
+@property (nonatomic, assign, readonly) BOOL muteStart;// 静音启动
+@property (nonatomic, assign) BOOL UMPEnable;// Admob UMP 弹窗
 
 /**
  获取单例

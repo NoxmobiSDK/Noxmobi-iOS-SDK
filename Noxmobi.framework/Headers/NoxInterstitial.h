@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NoxInterstitialDelegate.h"
+#import <Noxmobi/NoxInterstitialDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

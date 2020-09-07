@@ -6,7 +6,7 @@
 //  Copyright © 2020 Chong. All rights reserved.
 //
 
-#import "NoxBaseComponent.h"
+#import <Noxmobi/NoxBaseComponent.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

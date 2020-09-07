@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NoxmobiDefines.h"
+#import <Noxmobi/NoxmobiDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

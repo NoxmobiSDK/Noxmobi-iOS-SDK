@@ -8,8 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NoxAdSize.h"
-#import "NoxmobiDefines.h"
+#import <Noxmobi/NoxAdSize.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,6 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 初始化Adapter
 - (instancetype)initWithConnector:(id<NoxConnectorProtocol>)connector;
+
+
+#pragma mark - Google UMP SDK 弹窗业务
+/// 这里Adapter保证回调在主线程
+- (void)UMPRequestATT:(void(^)(BOOL isAuthorized, NSError * _Nullable error))handler;
 
 
 #pragma mark - Banner
