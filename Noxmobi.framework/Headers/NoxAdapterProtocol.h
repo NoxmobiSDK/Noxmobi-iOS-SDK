@@ -13,9 +13,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol NoxConnectorProtocol;
+
 @class NoxNativeAdView, NoxNativeMediaView, NoxNativeIconView, NoxNativeAdChoicesView;
 
 @protocol NoxAdapterProtocol <NSObject>
+
 @optional
 
 #pragma mark - 公共方法
