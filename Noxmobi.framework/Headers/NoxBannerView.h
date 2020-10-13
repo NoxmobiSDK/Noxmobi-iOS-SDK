@@ -68,6 +68,16 @@ adFrame举例：
 */
 + (void)removeBanner:(NSString *)placementID;
 
+/**
+ 设置是否自动刷新，默认为YES
+ */
++ (void)autoRefreshEnable:(BOOL)enable forPlacementID:(NSString *)placementID;
+
+/**
+ 设置自动刷新的时间间隔，默认为30s
+ */
++ (void)autoRefreshDuration:(NSTimeInterval)duration forPlacementID:(NSString *)placementID;
+
 @end
 
 NS_ASSUME_NONNULL_END
