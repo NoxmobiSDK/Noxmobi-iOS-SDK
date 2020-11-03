@@ -15,6 +15,8 @@
 #define NOX_EXTERN extern __attribute__((visibility("default")))
 #endif
 
+#define NOX_DEPRECATED __attribute__((deprecated))
+#define NOX_DEPRECATED_WITH_MESSAGE(M) __attribute__((deprecated(M)))
 
 typedef NSString *NoxNativeRegisterKey NS_EXTENSIBLE_STRING_ENUM;
 /**

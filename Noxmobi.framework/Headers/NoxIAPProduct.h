@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NoxIAPProduct : NSObject
+@interface NoxIAPProduct : NSObject <NSSecureCoding>
 
 @property (nonatomic, copy) NSString *productTitle;
 @property (nonatomic, copy) NSString *productDescription;

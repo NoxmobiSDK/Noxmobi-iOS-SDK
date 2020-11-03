@@ -17,4 +17,13 @@ typedef NS_ENUM(NSUInteger, NoxIAPPaymentStatus) {
     NoxIAPPaymentStatusPaidButUnverified  // 已支付，但尚未验证成功
 };
 
+typedef NS_ENUM(NSInteger, NoxIAPSubscriptionTimeLimit) {
+    NoxIAPSubscriptionTimeLimitOneWeek,
+    NoxIAPSubscriptionTimeLimitOneMonth,
+    NoxIAPSubscriptionTimeLimitTwoMonths,
+    NoxIAPSubscriptionTimeLimitThreemonths,
+    NoxIAPSubscriptionTimeLimitHalfYear,
+    NoxIAPSubscriptionTimeLimitOneYear
+};
+
 #endif /* NoxIAPConst_h */

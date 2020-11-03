@@ -74,7 +74,7 @@ adFrame举例：
 + (void)autoRefreshEnable:(BOOL)enable forPlacementID:(NSString *)placementID;
 
 /**
- 设置自动刷新的时间间隔，默认为30s
+ 设置自动刷新的时间间隔，默认为15s
  */
 + (void)autoRefreshDuration:(NSTimeInterval)duration forPlacementID:(NSString *)placementID;
 

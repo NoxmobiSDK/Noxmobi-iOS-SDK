@@ -9,8 +9,9 @@
 
 #import <Foundation/Foundation.h>
 #import <Noxmobi/NoxIAPConst.h>
+#import <Noxmobi/NoxmobiDefines.h>
 
-@class NoxIAPProduct;
+@class NoxIAPProduct, NoxIAPAutoRenewableSubscription;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)paymentStatus:(NoxIAPPaymentStatus)status product:(NoxIAPProduct *)product error:(nullable NSError *)error;
 /// 恢复购买的商品
 - (void)didReceiveRestoreProductIDs:(NSArray<NSString *> *)productIDs;
+/// 获取自动续期订阅最新信息
+- (void)didReceiveAutoRenewableSubscription:(nullable NSArray<NoxIAPAutoRenewableSubscription *> *)subscriptions error:(nullable NSError *)error;
 
 @end
 

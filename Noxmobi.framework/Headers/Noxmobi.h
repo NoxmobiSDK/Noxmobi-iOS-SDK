@@ -21,11 +21,14 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 #import <Noxmobi/NoxAdSize.h>
 #import <Noxmobi/NoxmobiDefines.h>
 #import <Noxmobi/NoxmobiError.h>
+
 #import <Noxmobi/NoxIAPManagerDelegate.h>
 #import <Noxmobi/NoxIAPConst.h>
 #import <Noxmobi/NoxIAPProduct.h>
 #import <Noxmobi/NoxIAPManager.h>
 #import <Noxmobi/AppleIAPErrorCode.h>
+#import <Noxmobi/NoxIAPAutoRenewableSubscription.h>
+
 #import <Noxmobi/NoxAdapterProtocol.h>
 #import <Noxmobi/NoxConnectorProtocol.h>
 
@@ -34,3 +37,4 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 #import <Noxmobi/NoxNativeMediaView.h>
 #import <Noxmobi/NoxNativeIconView.h>
 #import <Noxmobi/NoxNativeAdChoicesView.h>
+
