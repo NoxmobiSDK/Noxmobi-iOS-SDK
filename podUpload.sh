@@ -18,7 +18,7 @@ srcCommand="pod spec lint $PodName.podspec"
 # push的原命令
 pushCommand="pod trunk push $PodName.podspec"
 # 附加命令参数：--skip-import-validation
-subCommand="--skip-import-validation"
+subCommand="--skip-import-validation --allow-warnings"
 echo "\n🔥是否附加--skip-import-validation参数[y/n]"
 read flag
 if [[ "$flag" == "y" ]]
@@ -71,3 +71,6 @@ else
     # 不包含
     echo "\n\n🔥验证未通过"
 fi
+
+
+

@@ -23,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)failedToReceiveProducts:(NSError *)error;
 /// 支付流程状态
 - (void)paymentStatus:(NoxIAPPaymentStatus)status product:(NoxIAPProduct *)product error:(nullable NSError *)error;
-/// 恢复购买的商品
-- (void)didReceiveRestoreProductIDs:(NSArray<NSString *> *)productIDs;
+/// 恢复购买的状态与商品ID
+- (void)didReceiveRestoreSucceed:(BOOL)succeed productIDs:(NSArray<NSString *> *)productIDs;
 /// 获取自动续期订阅最新信息
 - (void)didReceiveAutoRenewableSubscription:(nullable NSArray<NoxIAPAutoRenewableSubscription *> *)subscriptions error:(nullable NSError *)error;
 

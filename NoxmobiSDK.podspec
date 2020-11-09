@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "NoxmobiSDK"
-  spec.version      = "1.11.0" # Mark
+  spec.version      = "1.12.0" # Mark
   spec.summary      = "Noxmobi iOS SDK"
   spec.homepage     = "https://github.com/NoxmobiSDK/Noxmobi-iOS-SDK"
   spec.license      = "MIT"
@@ -12,6 +12,8 @@ Pod::Spec.new do |spec|
   spec.source_files = "Noxmobi.framework/Headers/*.{h}" # Noxmobi.framework/Headers/*.{h,m}
   
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+  # spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   spec.ios.vendored_frameworks = 'Noxmobi.framework'
   spec.requires_arc = true
   spec.frameworks = "Foundation", "UIKit", "AdSupport" #依赖多个系统framework
