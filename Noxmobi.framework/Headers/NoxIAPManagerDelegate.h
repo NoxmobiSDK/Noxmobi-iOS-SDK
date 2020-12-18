@@ -11,7 +11,7 @@
 #import <Noxmobi/NoxIAPConst.h>
 #import <Noxmobi/NoxmobiDefines.h>
 
-@class NoxIAPProduct, NoxIAPAutoRenewableSubscription;
+@class NoxIAPProduct, NoxIAPTransaction;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,14 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取商品列表成功
 - (void)didReceiveProducts:(NSArray<NoxIAPProduct *> *)products;
+
 /// 获取商品列表失败
 - (void)failedToReceiveProducts:(NSError *)error;
+
 /// 支付流程状态
-- (void)paymentStatus:(NoxIAPPaymentStatus)status product:(NoxIAPProduct *)product error:(nullable NSError *)error;
-/// 恢复购买的状态与商品ID
-- (void)didReceiveRestoreSucceed:(BOOL)succeed productIDs:(NSArray<NSString *> *)productIDs;
-/// 获取自动续期订阅最新信息
-- (void)didReceiveAutoRenewableSubscription:(nullable NSArray<NoxIAPAutoRenewableSubscription *> *)subscriptions error:(nullable NSError *)error;
+- (void)paymentStatus:(NoxIAPPaymentStatus)status transaction:(NoxIAPTransaction *)transaction;
+
+/// 恢复购买
+- (void)didReceiveRestoreTransactions:(NSArray<NoxIAPTransaction *> *)transactions error:(NSError *)error;
 
 @end
 

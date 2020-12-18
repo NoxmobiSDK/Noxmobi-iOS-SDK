@@ -26,4 +26,15 @@ typedef NS_ENUM(NSInteger, NoxIAPSubscriptionTimeLimit) {
     NoxIAPSubscriptionTimeLimitOneYear
 };
 
+typedef NS_ENUM(NSInteger, NoxIAPProductType) {
+    /// 消耗型
+    NoxIAPProductTypeConsumables,
+    /// 非消耗型
+    NoxIAPProductTypeNonConsumables,
+    /// 非续期订阅
+    NoxIAPProductTypeNonRenewingSubscriptions,
+    /// 自动续期订阅
+    NoxIAPProductTypeAutoRenewableSubscriptions
+};
+
 #endif /* NoxIAPConst_h */

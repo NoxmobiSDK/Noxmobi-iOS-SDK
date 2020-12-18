@@ -27,7 +27,8 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 #import <Noxmobi/NoxIAPProduct.h>
 #import <Noxmobi/NoxIAPManager.h>
 #import <Noxmobi/AppleIAPErrorCode.h>
-#import <Noxmobi/NoxIAPAutoRenewableSubscription.h>
+#import <Noxmobi/NoxIAPTransaction.h>
+#import <Noxmobi/NoxIAPConfig.h>
 
 #import <Noxmobi/NoxAdapterProtocol.h>
 #import <Noxmobi/NoxConnectorProtocol.h>
