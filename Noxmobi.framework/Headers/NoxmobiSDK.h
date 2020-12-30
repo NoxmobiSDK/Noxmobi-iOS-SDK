@@ -17,7 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) BOOL isTestMode;
 @property (nonatomic, assign, readonly) BOOL debugLogEnable;
 @property (nonatomic, assign, readonly) BOOL muteStart;// 静音启动
-@property (nonatomic, assign) BOOL UMPEnable;// Admob UMP 弹窗
+
+// ================================UMP=================================
+// 是否启用UMP
+@property (nonatomic, assign, readonly) BOOL UMPEnable;
+// UMP测试时需要的所有测试设备的ID
+@property (nonatomic, strong, readonly) NSArray<NSString *> *UMPDeviceIDs;
+// ================================End=================================
 
 /**
  获取单例
@@ -49,6 +55,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)muteStart:(BOOL)mute;
 
+/**
+ @param UMPEnable 设置YES表示使用UMP处理GDPR、IDFA以及CCPA等隐私权限，默认NO
+ @param deviceIDs UMP在控制台输出的测试设备ID，类似于下面这条信息:
+    <UMP SDK> To enable debug mode for this device, set: UMPDebugSettings.testDeviceIdentifiers = @[ @"26BFEBC8-5B2B-4DF3-XXXX-A9183DEBA209" ];
+ @param completion 如果使用UMP，请在此回调中开始您的广告请求，否则将可能违反GDPR等相关条款
+ */
+- (void)setUMPAlertEnable:(BOOL)UMPEnable
+            testDeviceIDs:(nullable NSArray<NSString *> *)deviceIDs
+               completion:(void(^)(void))completion;
 
 #pragma mark - Remote Config API
 /**

@@ -6,6 +6,13 @@ PodName="Noxmobi"
 srcVer=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" ./$PodName.framework/Info.plist)
 echo "\n🔥版本号 = " "$srcVer"
 
+echo "\n🔥是否继续执行?[y/n]"
+read flag
+if [[ "$flag" != "y" ]]
+then
+    exit 101
+fi
+
 echo "\n🔥添加到暂存区 git add . ："
 gitAddRes=`git add .`
 

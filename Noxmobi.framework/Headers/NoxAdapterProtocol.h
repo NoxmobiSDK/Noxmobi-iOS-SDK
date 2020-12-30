@@ -32,9 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithConnector:(id<NoxConnectorProtocol>)connector;
 
 
-#pragma mark - Google UMP SDK 弹窗业务
-/// 这里Adapter保证回调在主线程
-- (void)UMPRequestATT:(void(^)(BOOL isAuthorized, NSError * _Nullable error))handler;
+#pragma mark - Google UMP SDK 弹窗
+- (void)startUMPAlert:(void(^)(void))handler;
 
 
 #pragma mark - Banner
