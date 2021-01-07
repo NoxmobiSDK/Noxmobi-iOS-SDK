@@ -28,13 +28,13 @@ typedef NS_ENUM(NSInteger, NoxIAPSubscriptionTimeLimit) {
 
 typedef NS_ENUM(NSInteger, NoxIAPProductType) {
     /// 消耗型
-    NoxIAPProductTypeConsumables,
+    NoxIAPProductTypeConsumables = 0,
     /// 非消耗型
-    NoxIAPProductTypeNonConsumables,
+    NoxIAPProductTypeNonConsumables = 1,
     /// 非续期订阅
-    NoxIAPProductTypeNonRenewingSubscriptions,
+    NoxIAPProductTypeNonRenewingSubscriptions = 2,
     /// 自动续期订阅
-    NoxIAPProductTypeAutoRenewableSubscriptions
+    NoxIAPProductTypeAutoRenewableSubscriptions = 3
 };
 
 #endif /* NoxIAPConst_h */
