@@ -44,6 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取一个横幅广告
 - (id __nullable)loadBannerWithSize:(NoxAdSize)adSize;
 
+/// IronSource专属，销毁上一个Banner才可以请求下一个
+- (void)destroyLastIronSourceBanner;
+
 
 #pragma mark - Interstitial
 

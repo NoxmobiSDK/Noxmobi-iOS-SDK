@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)mutedStart;
 - (BOOL)testModeEnable;
+- (BOOL)fbATTEnable;
 
 @property (nonatomic, weak) id<NoxConnectorProtocol> delegate;
 
