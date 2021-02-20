@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setUMPAlertEnable:(BOOL)UMPEnable
             testDeviceIDs:(nullable NSArray<NSString *> *)deviceIDs
-               completion:(void(^)(void))completion;
+               completion:(nullable void(^)(void))completion;
 
 #pragma mark - Remote Config API
 /**
