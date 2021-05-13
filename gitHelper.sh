@@ -3,8 +3,7 @@
 PodName="Noxmobi"
 
 # 读取plist中的版本号
-#srcVer=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" ./$PodName.framework/Info.plist)
-srcVer="2.6.3.1"
+srcVer=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" ./$PodName.framework/Info.plist)
 echo "\n🔥版本号 = " "$srcVer"
 
 echo "\n🔥是否继续执行?[y/n]"

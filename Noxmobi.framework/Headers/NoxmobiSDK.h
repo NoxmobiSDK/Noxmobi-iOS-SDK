@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)showDebugView;
 
 /**
- 是否静音开启广告，默认为NO不静音开启广告 
+ 是否静音开启广告，默认为NO不静音开启广告
  */
 - (void)muteStart:(BOOL)mute;
 
@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setUMPAlertEnable:(BOOL)UMPEnable
             testDeviceIDs:(nullable NSArray<NSString *> *)deviceIDs
-               completion:(nullable void(^)(void))completion;
+               completion:(nullable void(^)(void))completion DEPRECATED_MSG_ATTRIBUTE("This API is about to be deprecated, it is recommended that you remove it in your code.");
 
 #pragma mark - Remote Config API
 /**
