@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "NoxmobiSDK"
-  spec.version      = "2.8.3" # Mark
+  spec.version      = "2.9.1" # Mark
   spec.summary      = "Noxmobi iOS SDK"
   spec.homepage     = "https://github.com/NoxmobiSDK/Noxmobi-iOS-SDK"
   spec.license      = "MIT"
@@ -24,5 +24,4 @@ Pod::Spec.new do |spec|
   # spec.libraries = 'iconv', 'xml2' # 设置依赖多个系统的library
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency 'AFNetworking'
-  # spec.dependency 'NoxmobiVASTComponent', '1.0.1'
 end

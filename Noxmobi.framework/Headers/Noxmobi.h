@@ -39,6 +39,14 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 #import <Noxmobi/NoxNativeIconView.h>
 #import <Noxmobi/NoxNativeAdChoicesView.h>
 
+#import <Noxmobi/NoxPromo.h>
+#import <Noxmobi/NoxPromoDelegate.h>
+
 #import <Noxmobi/NoxVASTManagerProtocol.h>
 #import <Noxmobi/NoxDSPShowDelegate.h>
 #import <Noxmobi/NoxVASTConnectorProtocol.h>
+#import <Noxmobi/NoxVASTCompanionProtocol.h>
+#import <Noxmobi/NoxVASTInfoProtocol.h>
+
+#import <Noxmobi/NoxmobiPlayer.h>
+
