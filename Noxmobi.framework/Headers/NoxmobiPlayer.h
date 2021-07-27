@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, BoundaryTimeProgress) {
 
 @protocol NoxmobiPlayerDelegate <NSObject>
 
+@optional
 // 0/4、1/4、2/4等时间节点进行回调
 - (void)playingBoundaryTimeProgress:(BoundaryTimeProgress)progress;
 // 还剩多少秒，每秒回调一次
