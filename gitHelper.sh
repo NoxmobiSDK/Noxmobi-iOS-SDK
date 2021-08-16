@@ -17,7 +17,7 @@ echo "\n🔥添加到暂存区 git add . ："
 gitAddRes=`git add .`
 
 echo "\n🔥提交 git commit："
-gitCommitRes=`git commit -m v$commitString`
+gitCommitRes=`git commit -m v$srcVer`
 echo "$gitCommitRes"
 
 echo "\n🔥推送到远程 git push："
