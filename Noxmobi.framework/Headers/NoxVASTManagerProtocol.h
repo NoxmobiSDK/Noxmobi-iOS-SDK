@@ -24,6 +24,8 @@ typedef void(^VASTParseComplete)(__nullable id<NoxVASTInfoProtocol>);
 // Promo交叉推广专用，返回解析完成的VASTInfoModel
 @property (nonatomic, copy) VASTParseComplete parseComplete;
 
+// 初始化setupVastManager
+- (void)setupVastManager;
 // 加载解析VAST XML数据，默认目标广告尺寸320x480
 - (void)loadVAST:(NSData *)xmlData;
 // 展示VAST广告
