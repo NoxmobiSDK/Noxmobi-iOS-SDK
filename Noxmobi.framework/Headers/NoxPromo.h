@@ -20,10 +20,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface NoxPromo : UIView
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Weverything"
+
+@protocol NoxPromoForUnityProtocol;
+
+@interface NoxPromo : UIView <NoxPromoForUnityProtocol>
+
+#pragma clang diagnostic pop
 
 // 可以接收交叉推广广告声明周期内的各类事件
 @property (nonatomic, weak) id<NoxPromoDelegate> delegate;
+
 /**
  交叉推广广告是否可用于展示
  */

@@ -46,6 +46,9 @@ typedef NS_ENUM(NSUInteger, BoundaryTimeProgress) {
 // 循环播放
 @property (nonatomic, assign) BOOL loop;
 
+// 不可点击
+@property (nonatomic, assign) BOOL canNotClick;
+
 @property (nonatomic, assign) CGFloat loopInterval;
 
 // 静音

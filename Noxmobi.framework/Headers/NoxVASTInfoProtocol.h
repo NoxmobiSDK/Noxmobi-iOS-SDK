@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 主要输出结果
 
+// 广告标题
+@property (nonatomic, copy) NSString *adTitle;
 // 观看多少秒可跳过此广告(可能为空)
 @property (nonatomic, assign) NSTimeInterval linearSkipoffset;
 // 播放时长

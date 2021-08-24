@@ -50,3 +50,5 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 
 #import <Noxmobi/NoxmobiPlayer.h>
 
+#import <Noxmobi/NoxPromoForUnityDelegate.h>
+#import <Noxmobi/NoxPromoForUnityProtocol.h>
