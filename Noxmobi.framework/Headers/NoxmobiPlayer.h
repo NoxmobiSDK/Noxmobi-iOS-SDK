@@ -40,6 +40,9 @@ typedef NS_ENUM(NSUInteger, BoundaryTimeProgress) {
 // 初始化播放器
 - (instancetype)initWithFrame:(CGRect)frame NS_DESIGNATED_INITIALIZER;
 
+// 播放器出错
+@property (nonatomic, strong) NSError * _Nullable error;
+
 // 倍速
 @property (nonatomic, assign) CGFloat rate;
 
@@ -49,6 +52,7 @@ typedef NS_ENUM(NSUInteger, BoundaryTimeProgress) {
 // 不可点击
 @property (nonatomic, assign) BOOL canNotClick;
 
+// 循环播放的间隔时间
 @property (nonatomic, assign) CGFloat loopInterval;
 
 // 静音

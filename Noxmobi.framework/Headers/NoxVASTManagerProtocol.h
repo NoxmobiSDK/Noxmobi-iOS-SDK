@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol NoxDSPShowDelegate, NoxVASTConnectorProtocol, NoxVASTInfoProtocol;
 
-typedef void(^VASTParseComplete)(__nullable id<NoxVASTInfoProtocol>);
+typedef void(^VASTParseComplete)(__nullable id<NoxVASTInfoProtocol>, NSError * __nullable error);
 
 @protocol NoxVASTManagerProtocol <NSObject>
 
@@ -23,14 +23,16 @@ typedef void(^VASTParseComplete)(__nullable id<NoxVASTInfoProtocol>);
 @property (nonatomic, assign) BOOL isRewardVideoAd;
 // Promo交叉推广专用，返回解析完成的VASTInfoModel
 @property (nonatomic, copy) VASTParseComplete parseComplete;
+// 融合模式下，DSP广告是否已解析完毕
+@property (nonatomic, assign) BOOL isAvailable;
 
 // 初始化setupVastManager
 - (void)setupVastManager;
-// 加载解析VAST XML数据，默认目标广告尺寸320x480
-- (void)loadVAST:(NSData *)xmlData;
+// Bidding融合：解析VAST XML数据，默认目标广告尺寸320x480
+- (void)loadVAST:(NSData *)xmlData complete:(VASTParseComplete)complete;
 // 展示VAST广告
 - (void)showVAST:(UIViewController *)rootViewController;
-// Promo交叉推广专用，仅解析VAST数据
+// Promo交叉推广：：解析VAST XML数据
 - (void)parseVAST:(NSData *)xmlData complete:(VASTParseComplete)complete;
 
 @end

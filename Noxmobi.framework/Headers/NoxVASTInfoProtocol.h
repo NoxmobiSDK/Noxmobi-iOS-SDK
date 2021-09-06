@@ -36,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger width;
 // 最终高
 @property (nonatomic, assign) NSInteger height;
+// DSP广告解析失败时此属性将会有值
+@property (nonatomic, strong) NSError *__nullable parseError;
 
 #pragma mark - 次要输出结果
 
