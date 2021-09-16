@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "NoxmobiSDK"
-  spec.version      = "2.9.6" # Mark
+  spec.version      = "2.9.8" # Mark
   spec.summary      = "Noxmobi iOS SDK"
   spec.homepage     = "https://github.com/NoxmobiSDK/Noxmobi-iOS-SDK"
   spec.license      = "MIT"
