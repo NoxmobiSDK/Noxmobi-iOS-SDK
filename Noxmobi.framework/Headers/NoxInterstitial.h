@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Noxmobi/NoxInterstitialDelegate.h>
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NoxInterstitial : NSObject

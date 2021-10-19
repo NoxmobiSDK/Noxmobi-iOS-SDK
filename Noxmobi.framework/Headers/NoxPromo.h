@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NoxPromoInitInfo : NSObject
 
-// 广告位id
+// Nox广告位id
 @property (nonatomic, copy) NSString *placementID;
 // 广告视图的位置，默认：CGPointZero
 @property (nonatomic, assign) CGPoint promoOrigin;
