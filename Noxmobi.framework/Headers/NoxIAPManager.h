@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 初始化配置
 + (void)setupWithConfiguration:(NoxIAPConfig *)config;
 
+/// 是否已初始化；YES表示已完成初始化
++ (BOOL)hadInitialized;
+
 /// 请求商品列表
 + (void)requestProducts;
 

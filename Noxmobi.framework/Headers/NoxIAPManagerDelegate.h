@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol NoxIAPManagerDelegate <NSObject>
 
+/// 初始化Nox IAP系统成功
+- (void)noxIAPInitializeSucceed;
+
+/// 初始化Nox IAP系统失败
+- (void)noxIAPInitializeFailed:(NSError *)error;
+
 /// 获取商品列表成功
 - (void)didReceiveProducts:(NSArray<NoxIAPProduct *> *)products;
 
