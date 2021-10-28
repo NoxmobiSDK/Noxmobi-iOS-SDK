@@ -8,6 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import "NoxIAPConst.h"
 
 @class SKProduct;
 
@@ -20,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *productCurrencyCode;
 @property (nonatomic, copy) NSString *productPrice;
 @property (nonatomic, copy) NSString *productID;
+//@property (nonatomic, assign) NoxIAPProductType productType;
 @property (nonatomic, strong) SKProduct *sourceProduct;
 
 @end

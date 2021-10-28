@@ -27,13 +27,13 @@ NS_ASSUME_NONNULL_BEGIN
 // IAP Manager 事件代理
 @property (nonatomic, weak) id<NoxIAPManagerDelegate> delegate;
 
+/// 添加商品ID与其对应的商品类型，为购买做准备
+- (void)addProductID:(NSString *)productID forType:(NoxIAPProductType)productType;
+
 // 商品ID与类型详情
 @property (nonatomic, strong, readonly) NSDictionary *productIDTypeInfo;
 // 可恢复购买的商品ID
 @property (nonatomic, strong, readonly) NSArray *restorableProductIDs;
-
-/// 添加商品ID与其对应的商品类型，为购买做准备
-- (void)addProductID:(NSString *)productID forType:(NoxIAPProductType)productType;
 
 @end
 
