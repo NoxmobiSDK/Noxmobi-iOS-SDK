@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol NoxAdapterProtocol;
+@protocol NoxAdapterProtocol, NoxImpressionLevelRevenueData;
 
 @protocol NoxConnectorProtocol <NSObject>
 @optional
@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)noxAdDidRewarded:(id<NoxAdapterProtocol>)adapter;
 - (void)noxAdDidStartPlaying:(id<NoxAdapterProtocol>)adapter;
 - (void)noxNaitveAdDidLoad:(id)nativeAd adapter:(id<NoxAdapterProtocol>)adapter;
+// v2.18.0新增展示级收入统计
+- (void)noxDidReceiveILRData:(id<NoxImpressionLevelRevenueData>)data;
 
 @end
 
