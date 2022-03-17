@@ -78,6 +78,13 @@ adFrame举例：
  */
 + (void)autoRefreshDuration:(NSTimeInterval)duration forPlacementID:(NSString *)placementID;
 
+/**
+ 强制加载广告
+ 
+ @param complete 当广告加载成功时将会触发此回调
+ */
++ (void)forceLoadAd:(NSString *)placementID complete:(void(^)(void))complete;
+
 @end
 
 NS_ASSUME_NONNULL_END
