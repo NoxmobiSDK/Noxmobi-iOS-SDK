@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Delegate
 
+- (void)noxAdDidLoad:(id<NoxAdapterProtocol>)adapter extra:(id)extra;// 这个只是Max要用
 - (void)noxAdDidLoad:(id<NoxAdapterProtocol>)adapter;
 - (void)noxAdFailedToLoad:(NSError *)error adapter:(id<NoxAdapterProtocol>)adapter;
 - (void)noxAdWillShow:(id<NoxAdapterProtocol>)adapter;
