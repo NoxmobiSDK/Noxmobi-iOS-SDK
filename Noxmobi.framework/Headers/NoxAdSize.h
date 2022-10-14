@@ -26,17 +26,17 @@ typedef struct NoxAdFrame NoxAdFrame;
 /**
  * 小型Banner尺寸
  */
-extern NoxAdSize const kNoxAdSize320x50;
+NOX_EXTERN NoxAdSize const kNoxAdSize320x50;
 
 /**
  * 中等Banner尺寸
  */
-extern NoxAdSize const kNoxAdSize320x100;
+NOX_EXTERN NoxAdSize const kNoxAdSize320x100;
 
 /**
  * 中矩形Banner尺寸
  */
-extern NoxAdSize const kNoxAdSize300x250;
+NOX_EXTERN NoxAdSize const kNoxAdSize300x250;
 
 /**
  * 通过CGSize获得自定广告尺寸
@@ -50,6 +50,6 @@ NOX_EXTERN NoxAdSize NoxAdSizeFromCGSize(CGSize size);
  NoxAdFrame adFrame = NoxMakeAdFrame(12, 34, kNoxAdSize320x100);
     x = 12, y = 34, width = 320, height = 100
  */
-extern NoxAdFrame NoxMakeAdFrame(CGFloat x, CGFloat y, NoxAdSize size);
+NOX_EXTERN NoxAdFrame NoxMakeAdFrame(CGFloat x, CGFloat y, NoxAdSize size);
 
 NS_ASSUME_NONNULL_END
