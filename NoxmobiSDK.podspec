@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.source_files = "Noxmobi.framework/Headers/*.{h}" # Noxmobi.framework/Headers/*.{h,m}
 
   spec.resource_bundles = {
-    'NoxmobiResource' => ['NoxmobiResource.bundle/*.png']
+#     'NoxmobiResource' => ['NoxmobiResource.bundle/*.png']
   }
   
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
