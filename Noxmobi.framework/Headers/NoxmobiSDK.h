@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NoxImpressionLevelRevenueData.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^revenueListener)(id<NoxImpressionLevelRevenueData> data);
 
 @interface NoxmobiSDK : NSObject
 
@@ -17,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) BOOL isTestMode;
 @property (nonatomic, assign, readonly) BOOL debugLogEnable;
 @property (nonatomic, assign, readonly) BOOL muteStart;// 静音启动
+@property (nonatomic, strong) revenueListener revenueListenerBlock;
 
 // ================================UMP=================================
 // 是否启用UMP
@@ -29,6 +33,11 @@ NS_ASSUME_NONNULL_BEGIN
  获取单例
  */
 + (NoxmobiSDK *)sharedInstance;
+
+/**
+ 注册广告展示级收入信息回调监听
+ */
+- (void)registerAdImpressionRevenueListener:(void(^)(id<NoxImpressionLevelRevenueData> data))completion;
 
 /**
  调用此方法注册您在Nox平台获取的ApiToken以及AppKey
