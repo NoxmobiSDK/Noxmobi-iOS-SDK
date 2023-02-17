@@ -21,6 +21,7 @@ typedef void(^revenueListener)(id<NoxImpressionLevelRevenueData> data);
 @property (nonatomic, assign, readonly) BOOL debugLogEnable;
 @property (nonatomic, assign, readonly) BOOL muteStart;// 静音启动
 @property (nonatomic, strong) revenueListener revenueListenerBlock;
+@property (nonatomic, assign) NSInteger delayTime;
 
 // ================================UMP=================================
 // 是否启用UMP
