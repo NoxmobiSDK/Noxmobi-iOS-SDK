@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 初始化Adapter
 - (instancetype)initWithConnector:(id<NoxConnectorProtocol>)connector;
 
+- (void)initSDK:(void(^)(BOOL success))callback;
+
 
 #pragma mark - Google UMP SDK IDFA弹窗
 - (void)startUMPAlert:(void(^)(void))handler;
@@ -70,6 +72,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 激励广告是否可用
 - (BOOL)isRewardAvailable;
+
+
+#pragma mark - AppOpen
+
+/// Adapter加载一个开屏广告
+- (void)loadAppOpen;
+
+/// 展示一个开屏广告
+- (void)showAppOpenAd:(UIViewController *)rootViewController;
+
+/// 开屏广告是否可用
+- (BOOL)isAppOpenAvailable;
 
 
 #pragma mark - Native

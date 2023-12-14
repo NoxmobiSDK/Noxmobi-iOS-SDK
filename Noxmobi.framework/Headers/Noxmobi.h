@@ -18,17 +18,19 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 #import <Noxmobi/NoxRewardVideoDelegate.h>
 #import <Noxmobi/NoxBannerView.h>
 #import <Noxmobi/NoxBannerViewDelegate.h>
+#import <Noxmobi/NoxAppOpen.h>
+#import <Noxmobi/NoxAppOpenDelegate.h>
 #import <Noxmobi/NoxAdSize.h>
 #import <Noxmobi/NoxmobiDefines.h>
 #import <Noxmobi/NoxmobiError.h>
 
-#import <Noxmobi/NoxIAPManagerDelegate.h>
-#import <Noxmobi/NoxIAPConst.h>
-#import <Noxmobi/NoxIAPProduct.h>
-#import <Noxmobi/NoxIAPManager.h>
-#import <Noxmobi/AppleIAPErrorCode.h>
-#import <Noxmobi/NoxIAPTransaction.h>
-#import <Noxmobi/NoxIAPConfig.h>
+//#import <Noxmobi/NoxIAPManagerDelegate.h>
+//#import <Noxmobi/NoxIAPConst.h>
+//#import <Noxmobi/NoxIAPProduct.h>
+//#import <Noxmobi/NoxIAPManager.h>
+//#import <Noxmobi/AppleIAPErrorCode.h>
+//#import <Noxmobi/NoxIAPTransaction.h>
+//#import <Noxmobi/NoxIAPConfig.h>
 
 #import <Noxmobi/NoxAdapterProtocol.h>
 #import <Noxmobi/NoxConnectorProtocol.h>
@@ -54,3 +56,4 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 #import <Noxmobi/NoxPromoForUnityProtocol.h>
 
 #import <Noxmobi/NoxImpressionLevelRevenueData.h>
+#import <Noxmobi/NoxPrivacy.h>

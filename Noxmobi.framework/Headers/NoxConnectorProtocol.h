@@ -47,6 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 // v2.18.0新增展示级收入统计
 - (void)noxDidReceiveILRData:(id<NoxImpressionLevelRevenueData>)data;
 
+- (void)noxDidInit:(id<NoxAdapterProtocol>)adapter;
+- (void)noxFailedToInit:(id<NoxAdapterProtocol>)adapter;
+
 @end
 
 NS_ASSUME_NONNULL_END

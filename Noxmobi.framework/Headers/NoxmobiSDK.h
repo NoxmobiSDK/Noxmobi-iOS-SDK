@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NoxImpressionLevelRevenueData.h"
+#import "NoxPrivacy.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,6 +30,8 @@ typedef void(^revenueListener)(id<NoxImpressionLevelRevenueData> data);
 // UMP测试时需要的所有测试设备的ID
 @property (nonatomic, strong, readonly) NSArray<NSString *> *UMPDeviceIDs;
 // ================================End=================================
+
+@property (nonatomic, strong) NoxPrivacy *privacy;
 
 /**
  获取单例
@@ -64,6 +67,13 @@ typedef void(^revenueListener)(id<NoxImpressionLevelRevenueData> data);
  是否静音开启广告，默认为NO不静音开启广告
  */
 - (void)muteStart:(BOOL)mute;
+
+- (void)setPrivacyEnable:(BOOL)enable;
+- (void)setTestGDPR:(BOOL)test;
+- (void)setPrivacyUrl:(NSString *)privacyUrl;
+- (void)setTermsUrl:(NSString *)termsUrl;
+
+- (NoxPrivacy *)getPrivacy;
 
 /**
  @param UMPEnable 设置YES表示使用UMP处理GDPR、IDFA以及CCPA等隐私权限，默认NO
