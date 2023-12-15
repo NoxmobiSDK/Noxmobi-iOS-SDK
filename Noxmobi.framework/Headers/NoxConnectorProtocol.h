@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)apiToken;
 - (NSString *)placementID;
 - (UIViewController * __nullable)rootViewController;
+- (NoxPrivacy *)adPrivacy;
 
 - (BOOL)mutedStart;
 - (BOOL)testModeEnable;
