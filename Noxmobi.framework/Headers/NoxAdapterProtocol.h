@@ -31,8 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 初始化Adapter
 - (instancetype)initWithConnector:(id<NoxConnectorProtocol>)connector;
 
-- (void)initSDK:(void(^)(BOOL success))callback;
-
 
 #pragma mark - Google UMP SDK IDFA弹窗
 - (void)startUMPAlert:(void(^)(void))handler;

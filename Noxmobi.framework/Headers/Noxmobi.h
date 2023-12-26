@@ -56,4 +56,3 @@ FOUNDATION_EXPORT NSString *const NoxmobiVersionString;
 #import <Noxmobi/NoxPromoForUnityProtocol.h>
 
 #import <Noxmobi/NoxImpressionLevelRevenueData.h>
-#import <Noxmobi/NoxPrivacy.h>

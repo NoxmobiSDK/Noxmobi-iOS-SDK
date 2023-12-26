@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "NoxmobiSDK"
-  spec.version      = "2.29.1" # Mark
+  spec.version      = "2.29.2" # Mark
   spec.summary      = "Noxmobi iOS SDK"
   spec.homepage     = "https://github.com/NoxmobiSDK/Noxmobi-iOS-SDK"
   spec.license      = "MIT"
   spec.author       = { "Chong" => "zhanglovesan@gmail.com" }
 
-  spec.platform     = :ios, "12.0"
+  spec.platform     = :ios, "11.0"
   spec.source       = { :git => "https://github.com/NoxmobiSDK/Noxmobi-iOS-SDK.git", :tag => "#{spec.version}" }
   spec.source_files = "Noxmobi.framework/Headers/*.{h}" # Noxmobi.framework/Headers/*.{h,m}
 

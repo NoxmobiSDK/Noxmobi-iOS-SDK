@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)apiToken;
 - (NSString *)placementID;
 - (UIViewController * __nullable)rootViewController;
-- (NoxPrivacy *)adPrivacy;
 
 - (BOOL)mutedStart;
 - (BOOL)testModeEnable;
@@ -47,9 +46,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)noxNaitveAdDidLoad:(id)nativeAd adapter:(id<NoxAdapterProtocol>)adapter;
 // v2.18.0新增展示级收入统计
 - (void)noxDidReceiveILRData:(id<NoxImpressionLevelRevenueData>)data;
-
-- (void)noxDidInit:(id<NoxAdapterProtocol>)adapter;
-- (void)noxFailedToInit:(id<NoxAdapterProtocol>)adapter;
 
 @end
 

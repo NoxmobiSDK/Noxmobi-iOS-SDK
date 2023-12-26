@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "NoxImpressionLevelRevenueData.h"
-#import "NoxPrivacy.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^revenueListener)(id<NoxImpressionLevelRevenueData> data);
+typedef void(^consentShowFailed)(int code,NSString *message);
 
 @interface NoxmobiSDK : NSObject
 
@@ -31,8 +31,8 @@ typedef void(^revenueListener)(id<NoxImpressionLevelRevenueData> data);
 @property (nonatomic, strong, readonly) NSArray<NSString *> *UMPDeviceIDs;
 // ================================End=================================
 
-@property (nonatomic, strong) NoxPrivacy *privacy;
-
+@property (nonatomic,assign,readonly) BOOL privacyEnable;
+@property (nonatomic,assign,readonly) BOOL privacyTest;
 /**
  获取单例
  */
@@ -47,6 +47,29 @@ typedef void(^revenueListener)(id<NoxImpressionLevelRevenueData> data);
  调用此方法注册您在Nox平台获取的ApiToken以及AppKey
  */
 - (void)registerApiToken:(NSString *)token appKey:(NSString *)appKey;
+
+- (void)registerApiToken:(UIViewController *)controller token:(NSString *)token appKey:(NSString *)appKey complete:(void(^)(void))complete;
+
+/**
+ 设置GDPR弹窗是否可用。
+ */
+- (void)setPrivacyEnable:(BOOL)enable;
+
+/**
+ 设置是否是测试GDPR
+ */
+- (void)setTestPrivacy:(BOOL)isTest;
+
+/**
+ 判断是否是GDPR区域
+ */
+- (BOOL)isGDPRGeo;
+
+/**
+ 展示GDPR弹窗
+ */
+- (void)showConsentFlow:(UIViewController *)controller success:(void(^)(void))showSuccess failed:(consentShowFailed)showFailed;
+
 
 /**
  设置为YES表示您需要使用测试模式
@@ -67,13 +90,6 @@ typedef void(^revenueListener)(id<NoxImpressionLevelRevenueData> data);
  是否静音开启广告，默认为NO不静音开启广告
  */
 - (void)muteStart:(BOOL)mute;
-
-- (void)setPrivacyEnable:(BOOL)enable;
-- (void)setTestGDPR:(BOOL)test;
-- (void)setPrivacyUrl:(NSString *)privacyUrl;
-- (void)setTermsUrl:(NSString *)termsUrl;
-
-- (NoxPrivacy *)getPrivacy;
 
 /**
  @param UMPEnable 设置YES表示使用UMP处理GDPR、IDFA以及CCPA等隐私权限，默认NO
