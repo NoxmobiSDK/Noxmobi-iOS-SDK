@@ -33,6 +33,8 @@ typedef void(^consentShowFailed)(int code,NSString *message);
 
 @property (nonatomic,assign,readonly) BOOL privacyEnable;
 @property (nonatomic,assign,readonly) BOOL privacyTest;
+
+@property (nonatomic,assign) UIViewController *privacyController;
 /**
  获取单例
  */
@@ -49,7 +51,7 @@ typedef void(^consentShowFailed)(int code,NSString *message);
 - (void)registerApiToken:(NSString *)token appKey:(NSString *)appKey;
 
 - (void)registerApiToken:(UIViewController *)controller token:(NSString *)token appKey:(NSString *)appKey complete:(void(^)(void))complete;
-
+- (void)registerApiToken:(UIViewController *)controller token:(NSString *)token appKey:(NSString *)appKey complete:(void(^)(void))complete readyToShowPrivacy:(void(^)(void))readyToShow;
 /**
  设置GDPR弹窗是否可用。
  */
