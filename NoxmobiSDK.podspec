@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "NoxmobiSDK"
-  spec.version      = "2.29.5" # Mark
+  spec.version      = "2.30.0" # Mark
   spec.summary      = "Noxmobi iOS SDK"
   spec.homepage     = "https://github.com/NoxmobiSDK/Noxmobi-iOS-SDK"
   spec.license      = "MIT"
@@ -11,9 +11,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/NoxmobiSDK/Noxmobi-iOS-SDK.git", :tag => "#{spec.version}" }
   spec.source_files = "Noxmobi.framework/Headers/*.{h}" # Noxmobi.framework/Headers/*.{h,m}
 
-# spec.resource_bundles = {
-#     'NoxmobiResource' => ['NoxmobiResource.bundle/*.png']
-# }
+ spec.resource_bundles = {spec.name => 'Noxmobi.framework/PrivacyInfo.xcprivacy'}
   
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   # spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }

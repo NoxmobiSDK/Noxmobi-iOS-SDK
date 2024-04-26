@@ -62,6 +62,8 @@ typedef void(^consentShowFailed)(int code,NSString *message);
  */
 - (void)setTestPrivacy:(BOOL)isTest;
 
+- (void)setPrivacyController:(UIViewController * _Nonnull)privacyController;
+
 /**
  判断是否是GDPR区域
  */
